@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update 
+    apt:
+     update_cache: yes
+  - name: install docker
+    apt-get:
+     name: 
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+
